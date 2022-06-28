@@ -25,6 +25,10 @@ h2{
     margin-bottom: 25px;
 }
 /* to do  container */
+img{
+    max-width: 100%;
+}
+
 #main-container{
     background-color:var(--bacground-to-do);
     position: relative;
