@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO Malinhodev</title>
+    <script src="https://kit.fontawesome.com/ecfd005938.js" crossorigin="anonymous"></script>
+    <link rel="icon" 
+      type="image/png" 
+      href="images/icotransparent.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section id="main-container">
+        <div id="add-container">
+            <h2>Adicione suas tarefas:</h2>
+            <form action="">
+                <input type="text" name="task" id="task" placeholder="O que você tem para fazer?">
+                <button type="submit" id="add"> <i class="fa fa-plus"></i></button>
+            </form>
+        </div>
+        <div id="tasks-container">
+            <h2>Veja suas tarefas:</h2>
+            <!-- template -->
+            <div class="task hide">
+                <i class="fa fa-check"></i>
+                <span class="task-title">Título da tarefa.</span>
+                <i class="fa fa-trash"></i>    
+            </div>     
+             <!--fim template-->  
+             <p id="empty-tasks">Não há terafas cadastradas.</p>
+        </div>
+    </section> <!--main-container-->
+
+
+<script src="js/script.js"></script>
+</body>
+</html>   

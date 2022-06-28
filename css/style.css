@@ -1,0 +1,151 @@
+:root{
+    --bacground-to-do:  #242424;
+    --color-buttons: #393939;
+    --font-button: #5e17eb;
+    --border-color: #444;
+    --color-done: #0dd657;
+    --trash-color: #ff5757;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #11111a;
+    background: -webkit-linear-gradient(85deg, #11111a 0%, #5e17eb 100%);
+    background: linear-gradient(85deg, #11111a 0%, #5e17eb 100%);
+}
+
+h2{
+    margin-bottom: 25px;
+}
+/* to do  container */
+#main-container{
+    background-color:var(--bacground-to-do);
+    position: relative;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    margin-top: 5vh;
+    border-radius: 8px;
+}
+
+#add-container{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#add-container input,#add-container button{
+    padding: 10px;
+    background-color: var(--color-buttons);
+    border: none;
+    border-radius: 8px;
+    width: 80%;
+    display: inline-block;
+}
+
+#add-container button{
+    width: 18%;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#add-container button i{
+    color: var(--font-button);
+}
+
+#add-container button:hover{
+    background-color: var(--font-button);
+}
+
+#add-container button:hover > i{
+    color: var(--bacground-to-do);
+}
+
+/* tasks container */
+.task{
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid  var(--border-color);
+    position: relative;
+}
+
+.hide {
+    display: none;
+}
+
+.task:hover .fa-trash{
+    display: block;
+}
+
+.fa.fa-check{
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    padding: 7px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.fa.fa-check.done{
+    color: var(--color-done);
+    border: 1px solid var(--color-done);
+}
+
+.fa.fa-check:hover, .fa.fa-trash:hover{
+    color: var(--font-button);
+    border-color:  var(--font-button);
+}
+
+.fa.fa-trash:hover{
+    color: var(--trash-color);
+    border-color:  var(--font-button);
+}
+.fa.fa-trash{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+#empty-tasks{
+    text-align: center;
+}
+
+/*mobile*/
+@media(max-width: 480px) {
+
+    body {
+        padding: 20px;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    #main-container{
+        max-width: 100%;
+        margin-top: 0;
+    }
+
+    .fa.fa-trash{
+        display: block;
+    }
+
+
+}
+
+@media(max-width: 300px){
+    #add-container input,#add-container button{
+        width: 100%;
+        display: block;
+        margin: 5px 0;
+    }
+}
