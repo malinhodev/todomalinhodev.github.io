@@ -3,4 +3,4 @@
 ## Tecnologias usadas:
  * HTML5
  * CSS3
- * Vanilla Javascript
+ * Vanilla Javascript ES6
